@@ -1,0 +1,56 @@
+A1. How many protein/copy-number pairs are in the file?
+53642
+How many unique copy number values are there in the file?
+16241
+How many pairs of protein and copy number values are in the file?
+19572
+
+A2. Compute the mean and standard deviation of copy numbers for all proteins (considering unique
+pairs only) first as a single number for all proteins:
+79.83, 362.17
+and then for each protein separately:
+        Gn      mean        std
+531     ALB 	22306.386 	NaN
+6853 	HBA2 	14178.655 	NaN
+6854 	HBB 	13538.518 	NaN
+8428 	LALBA 	12454.998 	NaN
+16847 	TMSB4X 	11622.015 	NaN
+7435 	IGLJ1 	7235.736 	NaN
+7437 	IGLL5 	7235.736 	NaN
+7434 	IGLC1 	7235.736 	NaN
+3682 	CSN1S1 	7160.290 	NaN
+6037 	GAPDH 	6999.011 	NaN
+
+A3. Calculate the percentile rank (in terms of average copy number ranks) for each protein.
+        Gn      mean        std 	percentile_rank
+531 	ALB 	22306.386 	NaN 	100.000000
+6853 	HBA2 	14178.655 	NaN 	99.994734
+6854 	HBB 	13538.518 	NaN 	99.989469
+8428 	LALBA 	12454.998 	NaN 	99.984203
+16847 	TMSB4X 	11622.015 	NaN 	99.978937
+7435 	IGLJ1 	7235.736 	NaN 	99.968406
+7437 	IGLL5 	7235.736 	NaN 	99.968406
+7434 	IGLC1 	7235.736 	NaN 	99.968406
+3682 	CSN1S1 	7160.290 	NaN 	99.957875
+6037 	GAPDH 	6999.011 	NaN 	99.952609
+
+B1. What is the domain with the highest average abundance (i.e. across all copies of the domain in all
+proteins) and what is the value of the average abundance, and how many times was the domain seen?
+ubiquitin
+9970.83
+14
+
+B2. Compute the mean and standard deviation of domain average abundance for each protein domain
+    Domain 	    domain_average_abundance 	domain_abundance_std 	count_domain 	percentile_rank
+0 	ubiquitin 	9970.828250 	532.688848 	14 	100.000000
+1 	Tropomyosin 4653.332000 	663.757852 	3 	99.771167
+2 	Tubulin 	4617.474333 	424.086615 	7 	99.427918
+3 	Tubulin_C 	4617.474333 	424.086615 	7 	99.427918
+4 	zf-C2H2 	2261.611833 	18.429448 	620 99.084668
+5 	Spectrin 	2088.733500 	56.975129 	31 	98.855835
+6 	RRM 	    1948.366333 	150.199195 	15 	98.627002
+7 	EF-hand 	1634.424000 	725.399604 	6 	98.398169
+8 	UDP-g_GGTase 1621.509000 	326.230077 	2 	98.169336
+9 	Sushi 	    1439.700500 	84.217423 	5 	97.940503
+
+

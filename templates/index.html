@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title%}Главный экран{% endblock %}
+{% block link %}
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+{% endblock %}
+{% block content %}
+    <div class="header">
+      Lets find some statistics on protein abondance and prevalent domains
+    </div>
+
+    <!-- Main Section -->
+    <div class="main">
+      Here are questions and answers
+        <h2>A1. How many protein/copy-number pairs are in the file? (Single numerical value)</h2>
+        <button class="calculate-btn" data-question="A1-1">Calculate</button>
+        <div id="result-A1-1"></div>
+
+        <h2>How many unique copy number values are there in the file?</h2>
+        <button class="calculate-btn" data-question="A1-2">Calculate</button>
+        <div id="result-A1-2"></div>
+
+        <h2>How many pairs of protein and copy number values are in the file?</h2>
+        <button class="calculate-btn" data-question="A1-3">Calculate</button>
+        <div id="result-A1-3"></div>
+
+        <h2>A2. Compute the mean and standard deviation of copy numbers for all proteins (considering unique
+pairs only) first as a single number for all proteins</h2>
+        <button class="calculate-btn" data-question="A2-1">Calculate</button>
+        <div id="result-A2-1"></div>
+
+        <h2>Compute the mean and standard deviation of copy numbers for each protein separately</h2>
+        <button class="calculate-btn" data-question="A2-2">Calculate</button>
+        <div id="result-A2-2"></div>
+
+        <h2>A3. Calculate the percentile rank (in terms of average copy number ranks) for each protein. Get top 10 proteins.</h2>
+        <button class="calculate-btn" data-question="A3">Calculate</button>
+        <div id="result-A3"></div>
+
+        <h2>B1. What is the domain with the highest average abundance (i.e. across all copies of the domain in all
+proteins) and what is the value of the average abundance, and how many times was the domain seen?</h2>
+        <button class="calculate-btn" data-question="B1">Calculate</button>
+        <div id="result-B1"></div>
+
+        <h2>B2. Compute the mean and standard deviation of domain average abundance and rank for each protein domain. Show top 10.</h2>
+        <button class="calculate-btn" data-question="B2">Calculate</button>
+        <div id="result-B2"></div>
+
+    </div>
+
+<script src="{{ url_for('static', filename='scripts/main_script.js') }}"></script>
+
+{% endblock %}
