@@ -36,21 +36,21 @@ A3. Calculate the percentile rank (in terms of average copy number ranks) for ea
 
 B1. What is the domain with the highest average abundance (i.e. across all copies of the domain in all
 proteins) and what is the value of the average abundance, and how many times was the domain seen?
-ubiquitin
-9970.83
-14
+Serum_albumin
+70252.11
+11
 
 B2. Compute the mean and standard deviation of domain average abundance for each protein domain
-    Domain 	    domain_average_abundance 	domain_abundance_std 	count_domain 	percentile_rank
-0 	ubiquitin 	9970.828250 	532.688848 	14 	100.000000
-1 	Tropomyosin 4653.332000 	663.757852 	3 	99.771167
-2 	Tubulin 	4617.474333 	424.086615 	7 	99.427918
-3 	Tubulin_C 	4617.474333 	424.086615 	7 	99.427918
-4 	zf-C2H2 	2261.611833 	18.429448 	620 99.084668
-5 	Spectrin 	2088.733500 	56.975129 	31 	98.855835
-6 	RRM 	    1948.366333 	150.199195 	15 	98.627002
-7 	EF-hand 	1634.424000 	725.399604 	6 	98.398169
-8 	UDP-g_GGTase 1621.509000 	326.230077 	2 	98.169336
-9 	Sushi 	    1439.700500 	84.217423 	5 	97.940503
+Domain 	domain_average_abundance 	domain_abundance_std 	count_domain 	percentile_rank
+0 	Serum_albumin 	70252.114000 	0.000000 	11 	    100.000000
+1 	Filamin 	    68351.321000 	0.000000 	80 	    99.984421
+2 	zf-C2H2 	    67576.944833 	18.429448 	11059 	99.968842
+3 	RRM 	        60546.024333 	150.199195 	381 	99.953264
+4 	Annexin 	    55981.212000 	0.000000 	60 	    99.937685
+5 	LRR 	        54726.935000 	0.000000 	1084 	99.922106
+6 	WD40 	        52304.828333 	83.895332 	788 	99.906527
+7 	EF-hand 	    51287.184000 	725.399604 	400 	99.890949
+8 	fn3 	        38532.728167 	13.489667 	728 	99.875370
+9 	Spectrin 	    35957.465500 	56.975129 	344 	99.859791
 
 

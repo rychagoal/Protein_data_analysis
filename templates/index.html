@@ -4,48 +4,49 @@
 <link rel="stylesheet" type="text/css" href="/css/style.css">
 {% endblock %}
 {% block content %}
-    <div class="header">
-      Lets find some statistics on protein abondance and prevalent domains
+<div class="container">
+    <h1>Protein Data Analysis App</h1>
+    <div class="q-block">
+        <div class="question"><b>A1.1.</b> How many protein/copy-number pairs are in the file?</div>
+        <button onclick="fetchAnswer('A1-1','answerA1_1')">Calculate</button>
+        <div id="answerA1_1" class="answer"></div>
     </div>
-
-    <!-- Main Section -->
-    <div class="main">
-      Here are questions and answers
-        <h2>A1. How many protein/copy-number pairs are in the file? (Single numerical value)</h2>
-        <button class="calculate-btn" data-question="A1-1">Calculate</button>
-        <div id="result-A1-1"></div>
-
-        <h2>How many unique copy number values are there in the file?</h2>
-        <button class="calculate-btn" data-question="A1-2">Calculate</button>
-        <div id="result-A1-2"></div>
-
-        <h2>How many pairs of protein and copy number values are in the file?</h2>
-        <button class="calculate-btn" data-question="A1-3">Calculate</button>
-        <div id="result-A1-3"></div>
-
-        <h2>A2. Compute the mean and standard deviation of copy numbers for all proteins (considering unique
-pairs only) first as a single number for all proteins</h2>
-        <button class="calculate-btn" data-question="A2-1">Calculate</button>
-        <div id="result-A2-1"></div>
-
-        <h2>Compute the mean and standard deviation of copy numbers for each protein separately</h2>
-        <button class="calculate-btn" data-question="A2-2">Calculate</button>
-        <div id="result-A2-2"></div>
-
-        <h2>A3. Calculate the percentile rank (in terms of average copy number ranks) for each protein. Get top 10 proteins.</h2>
-        <button class="calculate-btn" data-question="A3">Calculate</button>
-        <div id="result-A3"></div>
-
-        <h2>B1. What is the domain with the highest average abundance (i.e. across all copies of the domain in all
-proteins) and what is the value of the average abundance, and how many times was the domain seen?</h2>
-        <button class="calculate-btn" data-question="B1">Calculate</button>
-        <div id="result-B1"></div>
-
-        <h2>B2. Compute the mean and standard deviation of domain average abundance and rank for each protein domain. Show top 10.</h2>
-        <button class="calculate-btn" data-question="B2">Calculate</button>
-        <div id="result-B2"></div>
-
+    <div class="q-block">
+        <div class="question"><b>A1.2.</b> How many unique copy number values are there?</div>
+        <button onclick="fetchAnswer('A1-2','answerA1_2')">Calculate</button>
+        <div id="answerA1_2" class="answer"></div>
     </div>
+    <div class="q-block">
+        <div class="question"><b>A1.3.</b> How many pairs of protein and copy number values are in the file?</div>
+        <button onclick="fetchAnswer('A1-3','answerA1_3')">Calculate</button>
+        <div id="answerA1_3" class="answer"></div>
+    </div>
+    <div class="q-block">
+        <div class="question"><b>A2.1.</b> Mean and std of copy numbers for all proteins (unique pairs only):</div>
+        <button onclick="fetchAnswer('A2-1','answerA2_1')">Calculate</button>
+        <div id="answerA2_1" class="answer"></div>
+    </div>
+    <div class="q-block">
+        <div class="question"><b>A2.2.</b> Table of mean/std for each protein (top 10 by mean):</div>
+        <button onclick="fetchAnswer('A2-2','answerA2_2')">Calculate</button>
+        <div id="answerA2_2" class="answer"></div>
+    </div>
+    <div class="q-block">
+        <div class="question"><b>A3.</b> Percentile rank for each protein (top 10 by mean copy number):</div>
+        <button onclick="fetchAnswer('A3','answerA3')">Calculate</button>
+        <div id="answerA3" class="answer"></div>
+    </div>
+    <div class="q-block">
+        <div class="question"><b>B1.</b> Domain with the highest average abundance, its value, and count:</div>
+        <button onclick="fetchAnswer('B1','answerB1')">Calculate</button>
+        <div id="answerB1" class="answer"></div>
+    </div>
+    <div class="q-block">
+        <div class="question"><b>B2.</b> Mean and std of domain average abundance (top 10):</div>
+        <button onclick="fetchAnswer('B2','answerB2')">Calculate</button>
+        <div id="answerB2" class="answer"></div>
+    </div>
+</div>
 
 <script src="{{ url_for('static', filename='scripts/main_script.js') }}"></script>
 
