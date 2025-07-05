@@ -44,12 +44,19 @@ Protein-Data-Analysis/
 
 ## ▶️ How to Run
 
-1. **Install dependencies:**
+1. **Create a virtual environment:**
+
+```
+python3 -m venv venv
+source venv/bin/activate
+```
+
+2. **Install dependencies:**
 
 ```
 pip install -r requirements.txt
 ```
-2. **Start the application:**
+3. **Start the application:**
 ```
 python app.py
 ```
