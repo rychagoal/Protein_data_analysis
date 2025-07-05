@@ -1,13 +1,18 @@
 A1. How many protein/copy-number pairs are in the file?
 53642
 How many unique copy number values are there in the file?
-16241
+19567 - # corrected answer
 How many pairs of protein and copy number values are in the file?
 19572
 
 A2. Compute the mean and standard deviation of copy numbers for all proteins (considering unique
 pairs only) first as a single number for all proteins:
-79.83, 362.17
+
+# I've recalculated carefully, but still have the same results. Std seems statistically reasonable because of a very large
+# range in this dataset
+
+79.83, 362.17 - # left this result here
+
 and then for each protein separately:
         Gn      mean        std
 531     ALB 	22306.386 	NaN
@@ -37,20 +42,22 @@ A3. Calculate the percentile rank (in terms of average copy number ranks) for ea
 B1. What is the domain with the highest average abundance (i.e. across all copies of the domain in all
 proteins) and what is the value of the average abundance, and how many times was the domain seen?
 Serum_albumin
-70252.11
+5947.1 - # corrected answer
 11
 
 B2. Compute the mean and standard deviation of domain average abundance for each protein domain
 Domain 	domain_average_abundance 	domain_abundance_std 	count_domain 	percentile_rank
-0 	Serum_albumin 	70252.114000 	0.000000 	11 	    100.000000
-1 	Filamin 	    68351.321000 	0.000000 	80 	    99.984421
-2 	zf-C2H2 	    67576.944833 	18.429448 	11059 	99.968842
-3 	RRM 	        60546.024333 	150.199195 	381 	99.953264
-4 	Annexin 	    55981.212000 	0.000000 	60 	    99.937685
-5 	LRR 	        54726.935000 	0.000000 	1084 	99.922106
-6 	WD40 	        52304.828333 	83.895332 	788 	99.906527
-7 	EF-hand 	    51287.184000 	725.399604 	400 	99.890949
-8 	fn3 	        38532.728167 	13.489667 	728 	99.875370
-9 	Spectrin 	    35957.465500 	56.975129 	344 	99.859791
+# corrected table
+ 	Domain 	mean 	domain_abundance_std 	count_domain 	percentile_rank
+0 	Serum_albumin 	5947.10225 	0.000000 	11 	100.000000
+1 	Casein_kappa 	4953.42000 	0.000000 	1 	99.984421
+2 	ApoC-I 	        4531.03100 	0.000000 	1 	99.968842
+3 	Keratin_2_tail 	3745.12100 	0.000000 	1 	99.953264
+4 	ApoA-II 	    3707.40500 	0.000000 	3 	99.937685
+5 	Gp_dh_N 	    3523.15750 	0.000000 	2 	99.914317
+6 	Gp_dh_C 	    3523.15750 	0.000000 	2 	99.914317
+7 	Transthyretin 	3512.36700 	0.000000 	1 	99.890949
+8 	Casein 	        2989.44600 	0.000000 	1 	99.875370
+9 	Thymosin 	    2785.38740 	25.710403 	5 	99.859791
 
 

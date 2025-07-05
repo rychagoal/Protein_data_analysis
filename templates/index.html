@@ -6,44 +6,52 @@
 {% block content %}
 <div class="container">
     <h1>Protein Data Analysis App</h1>
+
     <div class="q-block">
         <div class="question"><b>A1.1.</b> How many protein/copy-number pairs are in the file?</div>
-        <button onclick="fetchAnswer('A1-1','answerA1_1')">Calculate</button>
+        <button onclick="fetchAnswer('/api/a1-1','answerA1_1')">Calculate</button>
         <div id="answerA1_1" class="answer"></div>
     </div>
+
     <div class="q-block">
         <div class="question"><b>A1.2.</b> How many unique copy number values are there?</div>
-        <button onclick="fetchAnswer('A1-2','answerA1_2')">Calculate</button>
+        <button onclick="fetchAnswer('/api/a1-2', 'answerA1_2')">Calculate</button>
         <div id="answerA1_2" class="answer"></div>
     </div>
+
     <div class="q-block">
         <div class="question"><b>A1.3.</b> How many pairs of protein and copy number values are in the file?</div>
-        <button onclick="fetchAnswer('A1-3','answerA1_3')">Calculate</button>
+        <button onclick="fetchAnswer('/api/a1-3','answerA1_3')">Calculate</button>
         <div id="answerA1_3" class="answer"></div>
     </div>
+
     <div class="q-block">
         <div class="question"><b>A2.1.</b> Mean and std of copy numbers for all proteins (unique pairs only):</div>
-        <button onclick="fetchAnswer('A2-1','answerA2_1')">Calculate</button>
+        <button onclick="fetchAnswer('/api/a2-1','answerA2_1')">Calculate</button>
         <div id="answerA2_1" class="answer"></div>
     </div>
+
     <div class="q-block">
         <div class="question"><b>A2.2.</b> Table of mean/std for each protein (top 10 by mean):</div>
-        <button onclick="fetchAnswer('A2-2','answerA2_2')">Calculate</button>
+        <button onclick="fetchAnswer('/api/a2-2','answerA2_2')">Calculate</button>
         <div id="answerA2_2" class="answer"></div>
     </div>
+
     <div class="q-block">
         <div class="question"><b>A3.</b> Percentile rank for each protein (top 10 by mean copy number):</div>
-        <button onclick="fetchAnswer('A3','answerA3')">Calculate</button>
+        <button onclick="fetchAnswer('/api/a3','answerA3')">Calculate</button>
         <div id="answerA3" class="answer"></div>
     </div>
+
     <div class="q-block">
         <div class="question"><b>B1.</b> Domain with the highest average abundance, its value, and count:</div>
-        <button onclick="fetchAnswer('B1','answerB1')">Calculate</button>
+        <button onclick="fetchAnswer('/api/b1','answerB1')">Calculate</button>
         <div id="answerB1" class="answer"></div>
     </div>
+
     <div class="q-block">
-        <div class="question"><b>B2.</b> Mean and std of domain average abundance (top 10):</div>
-        <button onclick="fetchAnswer('B2','answerB2')">Calculate</button>
+        <div class="question"><b>B2.</b> Mean and std of domain average abundance:</div>
+        <button onclick="fetchAnswer('/api/b2','answerB2')">Calculate</button>
         <div id="answerB2" class="answer"></div>
     </div>
 </div>
